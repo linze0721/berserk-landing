@@ -72,6 +72,12 @@ body { background: #000; color: #fff; font-family: "JetBrains Mono", monospace; 
     transform: none;
     transition: none;
   }
+  .btn-primary,
+  .btn-primary:hover,
+  .btn-primary:active {
+    transform: none;
+    transition: none;
+  }
 }
 
 /* ── Button glow on hover ── */
@@ -84,14 +90,27 @@ body { background: #000; color: #fff; font-family: "JetBrains Mono", monospace; 
 
 /* ── Primary CTA ── */
 .btn-primary {
-  background: #fff;
-  color: #000;
-  border: 1px solid #fff;
-  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.03);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(0) scale(1);
 }
 .btn-primary:hover {
-  background: #e5e5e5;
-  box-shadow: 0 0 24px rgba(255,255,255,0.12), 0 0 48px rgba(255,255,255,0.06);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.7);
+  box-shadow:
+    inset 0 0 16px rgba(255, 255, 255, 0.05),
+    0 0 20px rgba(255, 255, 255, 0.06);
+  transform: translateY(-1px) scale(1);
+}
+.btn-primary:active {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.02);
+  transform: translateY(0) scale(0.97);
+  transition-duration: 0.1s;
 }
 
 /* ── Card hover ── */
