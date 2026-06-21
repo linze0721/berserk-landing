@@ -16,17 +16,17 @@ export default function SocialProof() {
         ref={ref}
         className={`reveal ${visible ? "is-visible" : ""} mx-auto max-w-3xl text-center`}
       >
-        <p className="mb-8 text-[11px] font-mono uppercase tracking-[0.35em] text-neutral-600">
+        <p className="mb-10 text-[10px] font-mono uppercase tracking-[0.3em] text-neutral-600">
           Pull requests opened against
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-5">
           {projects.map((p) => (
             <span
               key={p.name}
-              className="text-sm font-mono tracking-wide text-neutral-500"
+              className="text-[13px] font-mono tracking-wider text-neutral-500"
             >
               {p.name}
-              <span className="ml-2 text-[11px] text-neutral-700">
+              <span className="ml-2.5 text-[10px] text-neutral-700">
                 {p.stars}★
               </span>
             </span>

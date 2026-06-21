@@ -15,12 +15,12 @@ export default function Terminal({
 }: TerminalProps) {
   return (
     <section
-      className={`overflow-hidden border border-neutral-800 bg-neutral-950 font-mono ${className}`}
+      className={`overflow-hidden border border-neutral-800/50 bg-neutral-950 font-mono ${className}`}
     >
-      <div className="flex items-center border-b border-neutral-800 px-4 py-2.5">
-        <p className="truncate text-[11px] text-neutral-500 tracking-wide">{title}</p>
+      <div className="flex items-center border-b border-neutral-800/50 px-5 py-3">
+        <p className="truncate text-[10px] text-neutral-600 tracking-wider">{title}</p>
       </div>
-      <div className={`p-5 text-sm leading-7 text-neutral-300 sm:p-6 ${bodyClassName}`}>
+      <div className={`p-6 text-sm leading-7 text-neutral-300 sm:p-7 ${bodyClassName}`}>
         {children}
       </div>
     </section>
