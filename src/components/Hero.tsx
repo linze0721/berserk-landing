@@ -31,7 +31,7 @@ const terminalLines: TerminalTypingLine[] = [
 
 export default function Hero() {
   return (
-    <section className="flex min-h-screen items-center justify-center px-6 py-20">
+    <section className="relative flex min-h-screen items-center justify-center px-6 py-20 hero-glow">
       <div className="mx-auto flex w-full max-w-2xl flex-col items-center text-center">
         <p className="mb-8 text-[11px] font-medium uppercase tracking-[0.4em] text-neutral-600">
           Berserk
@@ -42,10 +42,15 @@ export default function Hero() {
           One pull request out.
         </h1>
         <p className="mt-5 max-w-lg text-base leading-7 text-neutral-500 font-sans">
-          Give Berserk a GitHub issue. It reads the code, writes a fix, runs the tests, and opens a pull request.
+          Give Berserk a GitHub issue. It reads the code, writes a fix, runs the
+          tests, and opens a pull request.
         </p>
 
-        <Terminal title="berserk" className="mt-12 w-full max-w-xl text-left" bodyClassName="min-h-[180px]">
+        <Terminal
+          title="berserk"
+          className="mt-12 w-full max-w-xl text-left"
+          bodyClassName="min-h-[180px]"
+        >
           <TerminalTyping
             lines={terminalLines}
             speed={18}
@@ -55,8 +60,7 @@ export default function Hero() {
 
         <a
           href="#waitlist"
-          className="mt-10 inline-block border border-neutral-700 px-7 py-2.5 text-xs font-mono tracking-widest text-neutral-400
-                     hover:border-white hover:text-white transition-all duration-300"
+          className="btn-primary mt-10 inline-block px-8 py-3 text-xs font-mono font-medium tracking-widest"
         >
           JOIN WAITLIST
         </a>
