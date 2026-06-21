@@ -4,11 +4,27 @@ export default function Waitlist() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit(e: FormEvent) {
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     if (!email.trim()) return;
-    // TODO: connect to Loops, Resend, or your own backend
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email.trim() }),
+      });
+      if (!res.ok) throw new Error();
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Try again.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -34,10 +50,12 @@ export default function Waitlist() {
             <button
               type="submit"
               className="border border-neutral-700 px-5 py-2.5 text-xs font-mono tracking-widest text-neutral-400
-                         hover:border-white hover:text-white transition-all duration-300 shrink-0"
+                         hover:border-white hover:text-white transition-all duration-300 shrink-0 disabled:opacity-40"
+              disabled={loading}
             >
-              JOIN
+              {loading ? "..." : "JOIN"}
             </button>
+            {error && <p className="text-red-500 text-xs font-mono mt-1">{error}</p>}
           </form>
         )}
 
