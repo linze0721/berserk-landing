@@ -42,7 +42,7 @@ export default function HowItWorks() {
   const { ref, visible } = useReveal();
 
   return (
-    <section className="border-t border-neutral-900 bg-[#0a0a0a] py-24 px-6">
+    <section className="section-tinted py-24 px-6">
       <div className="mx-auto max-w-4xl">
         <div
           ref={ref}

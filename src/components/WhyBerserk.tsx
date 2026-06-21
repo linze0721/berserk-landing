@@ -39,7 +39,7 @@ export default function WhyBerserk() {
   const { ref, visible } = useReveal();
 
   return (
-    <section className="border-t border-neutral-900 py-24 px-6">
+    <section className="py-24 px-6">
       <div className="mx-auto max-w-4xl">
         <div
           ref={ref}

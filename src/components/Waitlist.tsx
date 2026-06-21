@@ -33,7 +33,7 @@ export default function Waitlist() {
   return (
     <section
       id="waitlist"
-      className="border-t border-neutral-900 bg-[#0a0a0a] py-28 px-6"
+      className="section-tinted py-28 px-6"
     >
       <div
         ref={ref}

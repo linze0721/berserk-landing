@@ -104,3 +104,26 @@ body { background: #000; color: #fff; font-family: "JetBrains Mono", monospace; 
   box-shadow: 0 4px 24px rgba(0,0,0,0.4);
   transform: translateY(-1px);
 }
+
+/* ── Section seam — centered gradient line that fades at edges ── */
+.seam {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 5%,
+    rgba(255, 255, 255, 0.055) 35%,
+    rgba(255, 255, 255, 0.055) 65%,
+    transparent 95%
+  );
+}
+
+/* ── Tinted section band — gradient that breathes in and out ── */
+.section-tinted {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.018) 10%,
+    rgba(255, 255, 255, 0.018) 90%,
+    transparent 100%
+  );
+}

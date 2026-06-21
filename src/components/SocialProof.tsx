@@ -11,7 +11,7 @@ export default function SocialProof() {
   const { ref, visible } = useReveal();
 
   return (
-    <section className="border-t border-neutral-900 bg-[#0a0a0a] py-16 px-6">
+    <section className="section-tinted py-20 px-6">
       <div
         ref={ref}
         className={`reveal ${visible ? "is-visible" : ""} mx-auto max-w-3xl text-center`}
