@@ -1,33 +1,4 @@
-import Terminal from "./Terminal";
-import TerminalTyping, { type TerminalTypingLine } from "./TerminalTyping";
-
-const terminalLines: TerminalTypingLine[] = [
-  {
-    text: "berserk solve supabase/supabase#46950",
-    delay: 300,
-    typing: true,
-    color: "text-white",
-    prefix: "$ ",
-  },
-  {
-    text: "analyzing issue...",
-    delay: 1200,
-    typing: false,
-    color: "text-neutral-600",
-  },
-  {
-    text: "4 files changed  +48 -8  tests passed",
-    delay: 2000,
-    typing: false,
-    color: "text-neutral-500",
-  },
-  {
-    text: "PR opened → supabase/supabase#47153",
-    delay: 1500,
-    typing: false,
-    color: "text-neutral-300",
-  },
-];
+import PromoVideo from "./PromoVideo";
 
 export default function Hero() {
   return (
@@ -50,17 +21,7 @@ export default function Hero() {
           tests, and opens a pull request.
         </p>
 
-        <Terminal
-          title="berserk"
-          className="mt-14 w-full max-w-xl text-left"
-          bodyClassName="min-h-[180px]"
-        >
-          <TerminalTyping
-            lines={terminalLines}
-            speed={18}
-            className="text-xs leading-6 sm:text-sm sm:leading-7"
-          />
-        </Terminal>
+        <PromoVideo />
 
         <a
           href="#waitlist"
